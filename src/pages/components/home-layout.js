@@ -3,7 +3,7 @@ import React from 'react';
 function HomeLayout(props) {
   return (
     <section>
-      layout
+      {/* traer las pro[iedades hijas */}
       {props.children}
     </section>
   )
