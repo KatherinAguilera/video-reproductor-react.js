@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #171c30;
+}
+.HomeLayout {
+  display: grid;
+  grid-template: auto / .4fr 2fr;
+  margin: 0 auto;
+  min-height: 100vh;
+}

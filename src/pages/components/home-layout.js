@@ -1,8 +1,9 @@
 import React from 'react';
+import './home-layout.css';
 
 function HomeLayout(props) {
   return (
-    <section>
+    <section className="HomeLayout">
       {/* traer las pro[iedades hijas */}
       {props.children}
     </section>
