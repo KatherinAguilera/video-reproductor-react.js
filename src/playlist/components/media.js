@@ -5,31 +5,15 @@ import './media.css';
 import PropTypes from"prop-types";
 // extender propiedades //Media es el nom del componente
 class Media extends PureComponent {
-  /***ECMA6**/
-//   constructor(props){
-//     super(props);
-//     this.state = {
-//         author: props.author
-//     }
-// }
-//ECMA7
   state = {
-    // author: 'Katherine'
-    // para mantener del valor en el index.js
     author: this.props.author
   }
-  // funcion del evento onClick ECMA7
-  handleClick = (event) => {
-    this.setState({
-      author: 'Emmanuel Alonso'
-  })
-}
   render() {
     return (
       // UI syntaxis JSX
       // this porque hara algo de class Media .nombreFuncion
       // onclick enlazar evento clic del DOM
-      <div className="Media" onClick={this.handleClick}>
+      <div className="Media" onClick={this.props.handleClick}>
         <div className="Media-cover">
           <img className="Media-image"
             src={this.props.cover}
