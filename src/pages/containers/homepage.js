@@ -6,6 +6,7 @@ import Related from '../components/related';
 import ModalContainer from '../../widgets/containers/modal'
 import Modal from '../../widgets/components/modal'
 import HandleError from '../../error/containers/handle-error';
+import VideoPlayer from '../../player/containers/video-player';
 class HomePage extends Component {
   // setear un estado
   state= {
@@ -39,6 +40,7 @@ class HomePage extends Component {
             handleClick={this.handleCloseModal}
           >
             <h1>Esto es un portal</h1>
+            <VideoPlayer />
           </Modal>
         </ModalContainer>
         }

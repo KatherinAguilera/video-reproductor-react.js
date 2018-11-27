@@ -11,6 +11,7 @@ import Search from '../components/search';
     event.preventDefault();
     console.log(this.input.value, 'submit')
    }
+   // funcion de acceder al elemento
   setInputRef = element => {
     this.input = element;
   }

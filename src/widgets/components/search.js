@@ -18,6 +18,7 @@ import './search.css';
       className="Search-input"
       name="search"
       onChange={props.handleChange}
+      // valor por defecto con react se hace con defaultValue pero en este caso no funcionaria
       value={props.value}
     />
   </form>
