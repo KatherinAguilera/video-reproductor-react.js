@@ -14,6 +14,13 @@ import PlayPause from '../components/play-pause';
       pause: !this.state.pause
     })
   }
+  // componente montado validar play/pause
+  componentDidMount() {
+    this.setState({
+      // si se cumple es true sino es false
+      pause: (!this.props.autoplay)
+    })
+  }
   render() {
     return (
       <VideoPlayerLayout>
@@ -28,7 +35,9 @@ import PlayPause from '../components/play-pause';
           handleClick={this.togglePlay}
         />
         <Video
-          autoplay={true}
+          autoplay={this.props.autoplay}
+          // this.state.pause pasando estado de play/pause
+          pause={this.state.pause}
           src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
         />
       </VideoPlayerLayout>

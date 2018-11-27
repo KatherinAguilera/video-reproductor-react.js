@@ -40,12 +40,14 @@ class HomePage extends Component {
             handleClick={this.handleCloseModal}
           >
             <h1>Esto es un portal</h1>
-            <VideoPlayer />
+            <VideoPlayer
+             autoplay
+            />
           </Modal>
         </ModalContainer>
         }
       </HomeLayout>
-      </HandleError>    
+      </HandleError>
     )
   }
 }
