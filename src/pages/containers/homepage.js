@@ -5,7 +5,9 @@ import Categories from '../../categories/components/categories';
 import Related from '../components/related';
 import ModalContainer from '../../widgets/containers/modal'
 import Modal from '../../widgets/components/modal'
-class Home extends Component {
+import HandleError from '../../error/containers/handle-error';
+class HomePage extends Component {
+  // setear un estado
   state= {
     modalVisible:false,
   }
@@ -23,6 +25,7 @@ class Home extends Component {
   render() {
     return (
       // lo que se coloque aca lo redendeara mi home-layout.js
+    <HandleError>
       <HomeLayout>
         <Related />
         <Categories
@@ -40,8 +43,9 @@ class Home extends Component {
         </ModalContainer>
         }
       </HomeLayout>
+      </HandleError>    
     )
   }
 }
 
-export default Home
+export default HomePage
