@@ -6,12 +6,14 @@ import PlayPause from '../components/play-pause';
 import Timer from '../components/timer.js';
 import Controls from '../components/video-player-controls.js';
 import formattedTime from'../../util/timer'
+import ProgressBar from '../components/progress-bar';
 
  class VideoPlayer extends Component {
   state = {
     pause: true,
     duration: 0,
     currentTime: 0,
+    value:0,
   }
   togglePlay = (event) => {
     this.setState({
@@ -30,7 +32,7 @@ import formattedTime from'../../util/timer'
     // quien dispara el evento
     this.video = event.target;
     this.setState({
-      duration: formattedTime(this.video.duration)
+      duration: this.video.duration
     });
   }
   // cuando de actualice el tiempo que hacemos
@@ -38,8 +40,12 @@ import formattedTime from'../../util/timer'
     // console.log(this.video.currentTime)
     this.setState({
       // currentTime es propiedad de html con su API de media
-      currentTime: formattedTime(this.video.currentTime)
+      currentTime: this.video.currentTime
     })
+  }
+  handleProgressChange = event => {
+    // event.target.value
+    this.video.currentTime = event.target.value
   }
   render() {
     return (
@@ -56,9 +62,14 @@ import formattedTime from'../../util/timer'
             handleClick={this.togglePlay}
           />
           <Timer
-            duration={this.state.duration}
+            duration={formattedTime(this.state.duration)}
             // pasamos el estado - luego a time.js
-            currentTime={this.state.currentTime}
+            currentTime={formattedTime(this.state.currentTime)}
+          />
+           <ProgressBar
+            duration={this.state.duration}
+            value={this.state.currentTime}
+            handleProgressChange={this.handleProgressChange}
           />
         </Controls>
         <Video
