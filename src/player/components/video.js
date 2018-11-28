@@ -24,7 +24,11 @@ import './video.css';
   }
   render() {
     // constante para pasarla a onloadedMetadata
-    const { handleLoadedMetadata,  handleTimeUpdate,} = this.props;
+    const {
+      handleLoadedMetadata,
+      handleTimeUpdate,
+      handleSeeking,
+      handleSeeked,} = this.props;
     return (
       <div className="Video">
         <video
@@ -37,6 +41,8 @@ import './video.css';
           onLoadedMetadata={handleLoadedMetadata}
           // cada vez que se ejecute el tirmpo ejecute una accion
           onTimeUpdate={handleTimeUpdate}
+          onSeeking={handleSeeking}
+          onSeeked={handleSeeked}
         />
       </div>
     )
