@@ -5,11 +5,13 @@ import Title from '../components/title';
 import PlayPause from '../components/play-pause';
 import Timer from '../components/timer.js';
 import Controls from '../components/video-player-controls.js';
+import formattedTime from'../../util/timer'
 
  class VideoPlayer extends Component {
   state = {
     pause: true,
     duration: 0,
+    currentTime: 0,
   }
   togglePlay = (event) => {
     this.setState({
@@ -28,8 +30,16 @@ import Controls from '../components/video-player-controls.js';
     // quien dispara el evento
     this.video = event.target;
     this.setState({
-      duration: this.video.duration
+      duration: formattedTime(this.video.duration)
     });
+  }
+  // cuando de actualice el tiempo que hacemos
+  handleTimeUpdate = event => {
+    // console.log(this.video.currentTime)
+    this.setState({
+      // currentTime es propiedad de html con su API de media
+      currentTime: formattedTime(this.video.currentTime)
+    })
   }
   render() {
     return (
@@ -47,14 +57,17 @@ import Controls from '../components/video-player-controls.js';
           />
           <Timer
             duration={this.state.duration}
+            // pasamos el estado - luego a time.js
+            currentTime={this.state.currentTime}
           />
         </Controls>
         <Video
           autoplay={this.props.autoplay}
           // this.state.pause pasando estado de play/pause
           pause={this.state.pause}
-          src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
           handleLoadedMetadata={this.handleLoadedMetadata}
+          handleTimeUpdate={this.handleTimeUpdate}
+          src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
         />
       </VideoPlayerLayout>
     )
