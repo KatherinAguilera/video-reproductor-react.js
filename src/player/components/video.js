@@ -23,6 +23,8 @@ import './video.css';
     this.video = element;
   }
   render() {
+    // constante para pasarla a onloadedMetadata
+    const { handleLoadedMetadata,} = this.props;
     return (
       <div className="Video">
         <video
@@ -31,6 +33,8 @@ import './video.css';
           // que pausar a que le damos play
           //hacer una referencia al elemnto del video que es el que pausa y play
           ref={this.setRef}
+          // Metodo para obtener la duracion del video
+          onLoadedMetadata={handleLoadedMetadata}
         />
       </div>
     )
