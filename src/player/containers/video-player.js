@@ -8,6 +8,7 @@ import Controls from '../components/video-player-controls.js';
 import formattedTime from'../../util/timer'
 import ProgressBar from '../components/progress-bar';
 import Spinner from '../components/spinner';
+import Volume from '../components/volume';
 
  class VideoPlayer extends Component {
   state = {
@@ -15,6 +16,7 @@ import Spinner from '../components/spinner';
     duration: 0,
     currentTime: 0,
     loading: false,
+    onOff: 1,
   }
   togglePlay = (event) => {
     this.setState({
@@ -60,6 +62,19 @@ import Spinner from '../components/spinner';
     // event.target.value
     this.video.currentTime = event.target.value
   }
+  handleVolumeChange = event => {
+    //volume elemento nativo del navegador de video
+    this.video.volume = event.target.value;
+    this.setState({
+			onOff: this.video.volume
+		})
+  }
+  handleVolClick = event => {
+		this.video.volume = !this.video.volume
+		this.setState({
+			onOff: this.video.volume
+		})
+	}
   render() {
     return (
       <VideoPlayerLayout>
@@ -84,11 +99,16 @@ import Spinner from '../components/spinner';
             value={this.state.currentTime}
             handleProgressChange={this.handleProgressChange}
           />
-          <Spinner
-          // validar estado loading si esta acyivo se pone
-          active={this.state.loading}
+           <Volume
+            onOff={this.state.onOff}
+            handleVolClick={this.handleVolClick}
+            handleVolumeChange={this.handleVolumeChange}
           />
         </Controls>
+        <Spinner
+        // validar estado loading si esta acyivo se pone
+        active={this.state.loading}
+        />
         <Video
           autoplay={this.props.autoplay}
           // this.state.pause pasando estado de play/pause
