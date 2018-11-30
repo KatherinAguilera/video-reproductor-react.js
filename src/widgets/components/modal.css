@@ -13,11 +13,11 @@
 }
 
 .Modal-close {
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   position: absolute;
-  right: -25px;
-  top: -25px;
+  right: -15px;
+  top: -15px;
   border-radius: 50%;
   border: none;
   background: #171c30;
@@ -28,5 +28,5 @@
 .Modal-close:after {
   content: "X";
   font-weight: bold;
-  font-size: 30px;
+  font-size: 20px;
 }

@@ -105,27 +105,29 @@ class VideoPlayer extends Component {
           this.setRef
         }
       >
-      <Title titulo = "Esto es un video chido!" / >
+       <Title
+          title={this.props.title}
+        />
       <Controls >
         <PlayPause
-        // mostrar dependiendo del estado play/pause
-        pause = {
-          this.state.pause
-        }
-        // handleClick de play-pause (props.handleclick)
-        //togglePlay sera una funcion
-        handleClick = {
-          this.togglePlay
-        }
-        /> 
+          // mostrar dependiendo del estado play/pause
+          pause = {
+            this.state.pause
+          }
+          // handleClick de play-pause (props.handleclick)
+          //togglePlay sera una funcion
+          handleClick = {
+            this.togglePlay
+          }
+          /> 
         <Timer duration = {
-          formattedTime(this.state.duration)
-        }
-        // pasamos el estado - luego a time.js
-        currentTime = {
-          formattedTime(this.state.currentTime)
-        }
-        />
+            formattedTime(this.state.duration)
+          }
+          // pasamos el estado - luego a time.js
+          currentTime = {
+            formattedTime(this.state.currentTime)
+          }
+          />
         <ProgressBar duration = {
           this.state.duration
         }
@@ -157,27 +159,16 @@ class VideoPlayer extends Component {
         this.state.loading
       }
       />
-      <Video autoplay = {
-        this.props.autoplay
-      }
+      <Video 
+        autoplay = {this.props.autoplay }
       // this.state.pause pasando estado de play/pause
-      pause = {
-        this.state.pause
-      }
-      handleLoadedMetadata = {
-        this.handleLoadedMetadata
-      }
-      handleTimeUpdate = {
-        this.handleTimeUpdate
-      }
-      handleSeeking = {
-        this.handleSeeking
-      }
-      handleSeeked = {
-        this.handleSeeked
-      }
-      src = "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4" /
-      >
+        pause = {this.state.pause}
+        handleLoadedMetadata = {this.handleLoadedMetadata}
+        handleTimeUpdate = {this.handleTimeUpdate}
+        handleSeeking = { this.handleSeeking }
+        handleSeeked = {this.handleSeeked}
+        src = {this.props.src}
+      />
       </VideoPlayerLayout>
     );
   }

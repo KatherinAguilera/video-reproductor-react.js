@@ -4,9 +4,8 @@ import './modal.css';
    // los componenetes funcionales no deben manejar eventos sino sus propias propiedades
   return (
     <div className="Modal">
-      esto es un modal
       {props.children}
-      <button onClick={props.handleClick}>cerrar</button>
+      <button className="Modal-close" onClick={props.handleClick}></button>
     </div>
   )
 }

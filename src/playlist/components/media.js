@@ -8,12 +8,19 @@ class Media extends PureComponent {
   state = {
     author: this.props.author
   }
+  handleClick = (event) => {
+    // console.log(this.props.image)
+    // this.setState({
+    //   author: 'Ricardo Celis',
+    // })
+    this.props.openModal(this.props);
+  }
   render() {
     return (
       // UI syntaxis JSX
       // this porque hara algo de class Media .nombreFuncion
       // onclick enlazar evento clic del DOM
-      <div className="Media" onClick={this.props.handleClick}>
+      <div className="Media" onClick={this.handleClick}>
         <div className="Media-cover">
           <img className="Media-image"
             src={this.props.cover}

@@ -6,7 +6,6 @@ const VideoPlayerLayout = props => (
     // hacer referencia para que aparezca todos los elemento en el fullscreen
     ref={props.setRef}
   >
-    {" "}
     {props.children}
   </div>
 );
