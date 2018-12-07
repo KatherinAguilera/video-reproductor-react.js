@@ -3,6 +3,7 @@
   flex: 1;
   align-items: center;
 }
- .ProgressBar input {
+.ProgressBar input {
+  color: aqua;
   width: 100%;
 }

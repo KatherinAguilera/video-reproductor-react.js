@@ -18,7 +18,7 @@ import './volume.css';
       :
       <Mute 
         size={25}
-        color="white" 
+        color="#c1d354" 
       />
     }
   </div>

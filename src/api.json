@@ -8,7 +8,7 @@
         {
           "title": "¿Qué es responsive Design?",
           "author": "LeonidasEsteban",
-          "type": "video",
+          "type": "Tecnología",
           "cover": "./images/covers/responsive.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
           "id": 1
@@ -16,7 +16,7 @@
         {
           "title": "Cómo optimzar la carga de un website",
           "author": "LeonidasEsteban",
-          "type": "video",
+          "type": "Tecnología",
           "cover": "./images/covers/optimizar.jpg",
           "src": "http://peach.themazzone.com/durian/movies/sintel-1024-surround.mp4",
           "id": 2
@@ -24,7 +24,7 @@
         {
           "title": "Qué es Bitcoin",
           "author": "Yograterol",
-          "type": "video",
+          "type": "Tecnología",
           "cover": "./images/covers/bitcoin.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
           "id": 3
@@ -32,7 +32,7 @@
         {
           "title": "Que pasó con HTML5",
           "author": "Freddier",
-          "type": "video",
+          "type": "Tecnología",
           "cover": "./images/covers/html5.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
           "id": 4
@@ -40,7 +40,7 @@
         {
           "title": "Lo mejor de Mejorando.la",
           "author": "Cvander",
-          "type": "video",
+          "type": "Tecnología",
           "cover": "./images/covers/mejorandola.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
           "id": 5
@@ -97,45 +97,45 @@
     {
       "id": 3,
       "description": "Si no te queda de otra",
-      "title": "Musica",
+      "title": "Música",
       "playlist": [
         {
-          "title": "Despacito",
-          "author": "Luis Fonsi",
-          "type": "video",
-          "cover": "./images/covers/despacito.jpg",
+          "title": "Tu respiración",
+          "author": "Leiva",
+          "type": "Video - Rock",
+          "cover": "./images/covers/leiva.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
           "id": 1
         },
         {
-          "title": "Echame la culpa",
-          "author": "Luis fonsi",
-          "type": "video",
-          "cover": "./images/covers/echame-la-culpa.jpg",
+          "title": "Dream on",
+          "author": "Dio",
+          "type": "Video - Rock",
+          "cover": "./images/covers/dio.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
           "id": 3
         },
         {
-          "title": "Mi Gente",
-          "author": "J Bavil",
-          "type": "video",
-          "cover": "./images/covers/mi-gente.jpg",
+          "title": "Kurenai",
+          "author": "X Japan",
+          "type": "Video - Metal",
+          "cover": "./images/covers/xjapan.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
           "id": 2
         },
         {
-          "title": "Felices los 4",
-          "author": "Maluma",
-          "type": "video",
-          "cover": "./images/covers/felices.jpg",
+          "title": "Here I go again",
+          "author": "Whitesnake",
+          "type": "Video - Rock",
+          "cover": "./images/covers/whitesnake.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
           "id": 4
         },
         {
-          "title": "Me Rehúso",
-          "author": "Danny Ocean",
-          "type": "video",
-          "cover": "./images/covers/rehuso.jpg",
+          "title": "Tu nombre",
+          "author": "Anabantha",
+          "type": "Video - gothic",
+          "cover": "./images/covers/anabantha.jpg",
           "src": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4",
           "id": 5
         }

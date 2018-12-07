@@ -101,10 +101,7 @@ class VideoPlayer extends Component {
   render() {
     return (
       // hacer referencia al elemento
-      <VideoPlayerLayout setRef = {
-          this.setRef
-        }
-      >
+      <VideoPlayerLayout setRef = {this.setRef}>
        <Title
           title={this.props.title}
         />
@@ -119,7 +116,7 @@ class VideoPlayer extends Component {
           handleClick = {
             this.togglePlay
           }
-          /> 
+          />
         <Timer duration = {
             formattedTime(this.state.duration)
           }
@@ -151,7 +148,7 @@ class VideoPlayer extends Component {
         <FullScreen handleFullScreenClick = {
           this.handleFullScreenClick
         }
-        /> 
+        />
       </Controls>
       <Spinner
       // validar estado loading si esta acyivo se pone
@@ -159,7 +156,7 @@ class VideoPlayer extends Component {
         this.state.loading
       }
       />
-      <Video 
+      <Video
         autoplay = {this.props.autoplay }
       // this.state.pause pasando estado de play/pause
         pause = {this.state.pause}
@@ -168,6 +165,7 @@ class VideoPlayer extends Component {
         handleSeeking = { this.handleSeeking }
         handleSeeked = {this.handleSeeked}
         src = {this.props.src}
+        // onClick={this.props.handleClick}
       />
       </VideoPlayerLayout>
     );

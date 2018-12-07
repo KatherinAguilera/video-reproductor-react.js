@@ -28,7 +28,8 @@ import './video.css';
       handleLoadedMetadata,
       handleTimeUpdate,
       handleSeeking,
-      handleSeeked,} = this.props;
+      handleSeeked,
+    handleClick,} = this.props;
     return (
       <div className="Video">
         <video
@@ -43,6 +44,7 @@ import './video.css';
           onTimeUpdate={handleTimeUpdate}
           onSeeking={handleSeeking}
           onSeeked={handleSeeked}
+          onClick={handleClick}
         />
       </div>
     )

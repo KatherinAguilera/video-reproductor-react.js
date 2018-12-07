@@ -3,7 +3,7 @@ import Search from '../components/search';
  class SearchContainer extends Component {
    // Estado por defecto en el buscador
   state = {
-    value: 'Luis Fonsi'
+    value: 'X Japan'
   }
   //  evitar que recargue la pagina
 
@@ -17,7 +17,9 @@ import Search from '../components/search';
   }
   handleInputChange = event => {
     this.setState({
-      value: event.target.value.replace(' ', '-')
+      // value: event.target.value.replace(' ', '-')
+      // espacio al hacerla busqueda
+      value: event.target.value.replace(' ', ' ')
     })
   }
   render() {

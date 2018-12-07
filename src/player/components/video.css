@@ -1,7 +1,9 @@
 .Video {
   width: inherit;
+
 }
 .Video video {
   width: inherit;
   vertical-align: middle;
+  
 }

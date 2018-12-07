@@ -1,22 +1,25 @@
 body {
   margin: 0;
   font-family: Arial;
-  background: #171c30;
 }
 .HomeLayout {
   display: grid;
   grid-template: auto / .4fr 2fr;
-  margin: 0 auto;
-  min-height: 100vh;
+
+}
+@media screen and (max-width: 768px)
+{
+  .HomeLayout {
+  display: grid;
+  grid-template: auto / auto;
+  }
 }.Media {
   cursor: pointer;
   margin-right: 15px;
-
   display: inline-block;
   width: 260px;
   vertical-align: top;
 }
-
 .Media:hover .Media-cover {
   box-shadow: 0 0 10px rgba(0,0,0,.3);
 }
@@ -29,6 +32,15 @@ body {
 
 .Media-image {
   object-fit: cover;
+  transition: .4s;
+  transition-delay: .1s;
+  
+}
+.Media-image:hover{
+  transform: scale(0.9);
+  cursor: pointer;
+  background: #d4d0d0;
+  opacity: .8;
 }
 
 .Media-title {
@@ -40,7 +52,10 @@ body {
   border-radius: 10px;
   text-align: center;
 }
+.Media-title:hover {
+  background:#c1d354;
 
+}
 .Media-author {
   font-size: 12px;
   margin: 5px 0 0 0;
@@ -84,25 +99,99 @@ body {
   outline: 0;
   transition: .2s;
   box-shadow: 2px 2px 5px rgba(0,0,0,.2);
+  box-sizing: border-box;
 }
  .Search-input:focus {
   box-shadow: 0 0 10px rgba(0,0,0,.5);
-}.Related img{
-  max-width: 200px;
-}.Modal {
-  max-width: 768px;
+}.Related{
+  display: flex;
+  align-items: center;
+  background:#0575A5;
+  flex-direction: column;
+  position: sticky; 
+  top: 0; 
+  height: 100vh; 
+}
+.Related img{
+  margin-top: 30px;
+  max-width: 100px;
+  max-height: 100px;
+}
+ul{
+  margin-top: 190px;
+  /* background: #F9BF15; */
+  color:white;
+  letter-spacing: 2px;
+  font-weight: bold;
   width: 100%;
+  text-align: center;
+  list-style: none;
+  padding-left: 0;
+
+}
+li:hover{
+  cursor: pointer;
+  background:#C1D354;
+  transition: .4s;
+  transform: scale(1.1);
+}
+li{
+  box-shadow:5px 2px 5px rgba(0,0,0,.2);
+  padding:40px 0 40px 0;
+}
+@media screen and (max-width: 768px)
+{
+  .Related{
+
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-between;
+    position: initial;
+    height: 100%;
+
+  }
+  .Related img{
+    margin: 10px 0 15px 15px;
+    max-width: 70px;
+    max-height: 70px;
+  }
+  ul{
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex: wrap;
+  }
+  li{
+    padding: 10px 8px 10px 20px;
+    font-size: 14px;
+    margin-right: 15px;
+    border-radius: 10px;
+  }
+}.Modal {
+  width: 70%;
   margin: 0 auto;
   position: fixed;
   left: 0;
   right: 0;
   top: 100px;
   background:  white;
-  padding: 20px;
+  padding: 10px;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0,0,0,.4);
-}
+  z-index: 3;
 
+}
+.Overlay{
+  background: rgba(33,28,28,.5);
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  right: 0;
+}
 .Modal-close {
   width: 35px;
   height: 35px;
@@ -120,6 +209,25 @@ body {
   content: "X";
   font-weight: bold;
   font-size: 20px;
+}
+@media screen and (max-width: 768px)
+{
+
+  .Modal {
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .Modal-close {
+    width: 25px;
+    height: 25px;
+    right: 0px;
+    top: 0px;
+    border: none;
+  }
 }.Error{
   display: flex;
   justify-content: center;
@@ -139,10 +247,12 @@ img{
   background: black;
 }.Video {
   width: inherit;
+
 }
 .Video video {
   width: inherit;
   vertical-align: middle;
+  
 }.Title {
   position: absolute;
   top: 20px;
@@ -194,7 +304,8 @@ img{
   flex: 1;
   align-items: center;
 }
- .ProgressBar input {
+.ProgressBar input {
+  color: aqua;
   width: 100%;
 }.Spinner {
   position: absolute;

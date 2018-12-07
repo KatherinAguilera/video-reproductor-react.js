@@ -45,5 +45,5 @@ Media.propTypes = {
   cover: PropTypes.string,
   title: PropTypes.string.isRequired,
   author: PropTypes.string,
-  type: PropTypes.oneOf(["video", "audio"])
+  type: PropTypes.oneOf(["video", "audio", "Tecnología", "Video - Rock", "Video - gothic", "Video - Metal" ])
 }

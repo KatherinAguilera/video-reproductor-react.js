@@ -1,12 +1,10 @@
 .Media {
   cursor: pointer;
   margin-right: 15px;
-
   display: inline-block;
   width: 260px;
   vertical-align: top;
 }
-
 .Media:hover .Media-cover {
   box-shadow: 0 0 10px rgba(0,0,0,.3);
 }
@@ -19,6 +17,15 @@
 
 .Media-image {
   object-fit: cover;
+  transition: .4s;
+  transition-delay: .1s;
+  
+}
+.Media-image:hover{
+  transform: scale(0.9);
+  cursor: pointer;
+  background: #d4d0d0;
+  opacity: .8;
 }
 
 .Media-title {
@@ -30,7 +37,10 @@
   border-radius: 10px;
   text-align: center;
 }
+.Media-title:hover {
+  background:#c1d354;
 
+}
 .Media-author {
   font-size: 12px;
   margin: 5px 0 0 0;
